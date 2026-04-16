@@ -1,0 +1,36 @@
+{
+    "_comentario": "=== CONFIGURAÇÃO DO BOT OCI A1.Flex ===",
+    "_instrucoes": "Copie este arquivo para 'config.json' e preencha todos os campos marcados com PREENCHER",
+    "oci_credentials": {
+        "_doc": "Credenciais da API OCI — obtenha em cloud.oracle.com → Perfil → API Keys",
+        "tenancy_ocid": "ocid1.tenancy.oc1..PREENCHER",
+        "user_ocid": "ocid1.user.oc1..PREENCHER",
+        "fingerprint": "aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99",
+        "key_file": "~/.oci/oci_api_key.pem",
+        "key_passphrase": "",
+        "region": "sa-saopaulo-1"
+    },
+    "instance": {
+        "_doc": "Parâmetros da instância que será criada",
+        "compartment_id": "ocid1.tenancy.oc1..PREENCHER",
+        "availability_domain": "xxxx:SA-SAOPAULO-1-AD-1",
+        "subnet_id": "ocid1.subnet.oc1.sa-saopaulo-1..PREENCHER",
+        "image_id": "ocid1.image.oc1.sa-saopaulo-1..PREENCHER",
+        "shape": "VM.Standard.A1.Flex",
+        "ocpus": 4,
+        "memory_gb": 24,
+        "boot_volume_size_gb": 50,
+        "display_name": "gorvax-server",
+        "ssh_public_key": "ssh-rsa AAAA... seu-email@example.com"
+    },
+    "bot": {
+        "_doc": "Configurações do bot",
+        "retry_interval_seconds": 60,
+        "max_attempts": 0
+    },
+    "telegram": {
+        "_doc": "Notificação Telegram (opcional) — deixe vazio para desativar",
+        "bot_token": "",
+        "chat_id": ""
+    }
+}
